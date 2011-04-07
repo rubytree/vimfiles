@@ -1,0 +1,26 @@
+- Add support for operating on selected text
+  * PROBLEM: This requires a key mapping for each snippet using selections.
+  * In converter change keyword from TM_SELECTED_TEXT
+  * Realize a tab was hit in visual mode, cut and get into a ruby variable.
+  * Do replacement on initial snippet definition like global vars etc.
+
+- Extend the libraries, especially for ruby!  Snippet definitions gratefully
+  accepted!
+
+- Extract bits of code to start creating a library for ruby-vim plugins.
+  * Outputting to buffer, copying selected text or registers
+  * Placing cursor
+  * Getting variables from vim
+  * Creating menus (dispatch with procs or send(:method_name))
+
+- Do everything in ruby, and let the library spit out generic wrappers using
+  VIM::evaluate (or something like that) so that the key bindings and
+  everything can be done in a ruby way.
+  
+- Text based (terminal vim) menu support (emenu works for now...)
+
+- Notifier that tells when a snippet trigger could be activated
+  * Maybe just modify the status line?
+
+- Use a better data structure for searching tab-triggers (BDD?)
+  * Put all active definitions into a tree/graph of some type.

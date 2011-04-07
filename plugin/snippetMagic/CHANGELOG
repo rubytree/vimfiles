@@ -1,0 +1,17 @@
+2006-03-01  Thomas Ziehmer 
+	* Fixed a bug in some of the regular expressions that incorrectly handled
+	periods and dollar signs that were inside snippet definitions (tab-stops).
+	This gets rid of an off by one error in higlighting and cursor placement.
+
+2006-02-25  Jeff Rose 
+	* Updated converter from TextMate bundles so now everything is stored in yaml
+	rather than either ruby or some custom format.
+	* No longer write out empty libraries (many don't have snippets defined).
+	* Fixed off by one for multi-line snippets
+	* Now using the TAB and SPACE settings of the current vim session so
+	hopefully everyone will be happy with what they get.
+	
+
+
+
+
